@@ -1,7 +1,7 @@
 ﻿	 (´･ω･`) THE DENKO PROJECT (´･ω･`)
 
 **   CONCEPT & SPRITE ART BY ENRALIS	**
-**  		THANK YOU IT0A & LANCE      **
+**  	    THANK YOU IT0A & LANCE      **
 **  DENKO SAGA TRANSLATED BY VGPERSON	**
 
 
