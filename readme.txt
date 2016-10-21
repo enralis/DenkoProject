@@ -1,7 +1,7 @@
 ﻿	 (´･ω･`) THE DENKO PROJECT (´･ω･`)
 
 **   CONCEPT & SPRITE ART BY ENRALIS	**
-**  		THANK YOU IT0A & LANCE 		**
+**  		THANK YOU IT0A & LANCE      **
 **  DENKO SAGA TRANSLATED BY VGPERSON	**
 
 
@@ -13,7 +13,7 @@ Aim of Denko's Trouble is to showcase
 Denko's saga immortalized through 2ch and
 the internet.
 
-		    ::: IF EDITING :::
+            ::: IF EDITING :::
 			
 * Assets referenced in .pde must be in the
   /data folder
@@ -23,6 +23,6 @@ the internet.
 * Have fun!
   
   
-	~	enralis.nior @ gmail.com    ~
+     ~   enralis.nior @ gmail.com    ~
   
   
