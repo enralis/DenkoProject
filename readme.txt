@@ -1,4 +1,4 @@
-﻿	 (´･ω･`) THE DENKO PROJECT (´･ω･`)
+﻿    (´･ω･`) THE DENKO PROJECT (´･ω･`)
 
 **   CONCEPT & SPRITE ART BY ENRALIS	**
 **  	    THANK YOU IT0A & LANCE      **
@@ -18,8 +18,9 @@ the internet.
 * Assets referenced in .pde must be in the
   /data folder
 * /data folder /must/ be in DenkoTrouble
-* Name of MAIN .pde [DenkoTrouble] must match
+* Name of MAIN .pde must match
   parent folder
+* Usually updated twice a week, Mon & Thur
 * Have fun!
   
   
