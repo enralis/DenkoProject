@@ -1,48 +1,35 @@
-Buttons[] bt;
+// NEEDS TO BE FIXED
 
-class Buttons {
-  
-  PImage buttons;
-
-  int Columns;
-  int Rows;
-  int W = buttons.width/Columns;
-  int H = buttons.height/Rows;
- 
- }
- 
 void Buttons(){
-  
-  boolean over = false;
-  boolean pressed = false;
-  float xpos = 100;
-  float ypos = 900;
-  int Columns = 4;
-  int Rows = 1;
-  int W = buttons.width/Columns;
-  int H = buttons.height/Rows;
 
-  
-  if(mouseX > xpos && mouseY > ypos && mouseX < xpos + W && mouseY < ypos + H){    
-  over = true;
-      if(mousePressed){
-        pressed = true;
-      }else{
-        pressed = false;
-      }
-    }else{
-      over =false;
-    }
-  
-    if (pressed == true){
-    image(bSprites[1], xpos, ypos);
-  } else {
-    image(bSprites[0], xpos, ypos);
+// CALL BUTTON
+  if (pressed == true){
+  buttons[1] = loadImage("buttons_1.png");  
+  bX[1] = 100;
+  bY[1] = 900;
+  bW[1] = 128;
+  bH[1] = 64;
+  } else { 
+    buttons[0] = loadImage("buttons_0.png");
+    bX[0] = 100;
+    bY[0] = 900;
+    bW[0] = 128;
+    bH[0] = 64;
   }
-  
-    if (pressed == true){
-    image(bSprites[3], 258, 900);
-  } else {
-    image(bSprites[2], 258, 900);
-  }
+
+image(buttons[0], bX[0], bY[0], bW[0], bH[0]);
+
+/*
+
+Button calling not yet fixed
+
+image(buttons[0], bX[0], bY[0], bW[0], bH[0]);
+image(buttons[1], bX[1], bY[1], bW[1], bH[1]);
+image(buttons[2], bX[2], bY[2], bW[2], bH[2]);
+image(buttons[3], bX[3], bY[3], bW[3], bH[3]);
+image(buttons[4], bX[4], bY[4], bW[4], bH[4]);
+image(buttons[5], bX[5], bY[5], bW[5], bH[5]);
+
+*/
+
 }

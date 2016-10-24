@@ -1,3 +1,10 @@
+// GAME STATES, SCREENS
+int HOME = 0;
+int CALL = 1;
+int MAIL = 2;
+int WEB = 3;
+int GameScreen;
+
 // CLOCK
 int cx, cy;
 float secondsRadius;
@@ -10,29 +17,28 @@ PImage bg;
 
 // SPRITES
 PImage denko;
-PImage buttons;
 PImage[] dSprites;
 PImage[] bSprites;
 PFont IgiariFont;
 
+// BUTTONS
+int numButtons = 2;
+PImage[] buttons = new PImage[numButtons];
+float[] bX = new float[numButtons];
+float[] bY = new float[numButtons];
+float[] bW = new float[numButtons];
+float[] bH = new float[numButtons];
+boolean pressed = false;
+
 void setup(){
-  size(640, 960);                      //iPhone 4 size
+  
+  size(640, 960); //iPhone 4 size
   bg = loadImage("pink_BG.jpg");
   frameRate(30);
+  imageMode(CENTER);
   
   IgiariFont = createFont("Igiari.otf", 20);
   textFont(IgiariFont);
-
-// BUTTONS
-  buttons = loadImage("Buttons.png");
-  imageMode(CORNER);
-  int bColumns = 4;
-  int bRows = 1;
-  int bW = buttons.width/bColumns;
-  int bH = buttons.height/bRows;
-  bSprites = new PImage[bColumns * bRows];
-  for (int bi=0; bi<bSprites.length; bi++) {
-    bSprites[bi] = buttons.get(bi * bW, 0, bW, bH);
 
 // CURSOR
   denko = loadImage("Denko.png");
@@ -57,19 +63,18 @@ void setup(){
   clockDiameter = radius * 1.8;
   cx = width/2;
   cy = height/4;
-  
-}
 
 }
+
 
 void draw(){
- 
-  background(bg);
- 
-  Clock();
-  IntroText();
-  Buttons();
-  
+
+switch(GameScreen){
+  case(0):
+    HOME();
+}
+
+// Cursor must be drawn last in draw loop
   Cursor();
   
 }

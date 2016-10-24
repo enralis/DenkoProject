@@ -9,7 +9,7 @@ void Cursor(){
   int currentAnimationFrame = frameCount % 100;
   fill(255, 255, 255, 40);
 
-// TRACK FPS & ANIMATION
+// TRACK FPS & ANIMATION (OPTIONAL)
 /*
   textAlign(LEFT);
   text("Frame Count: " + frameCount, 50, 50);
