@@ -19,7 +19,15 @@ void mousePressed()                                         // when you click th
     {  
     if(dist(mouseX,mouseY,bX[i], bY[i]) < bW[i]/2)    // did we click near its center
       {
-      pressed = true;                                       // if we did, start it fading
+      pressed = true;
+      if (GameScreen != WEB) {
+        GameScreen = WEB;
+      } else {
+        GameScreen = HOME;
+      }
+      println("pressed");
+      } else {
+      pressed = false;
       }
     }
   }

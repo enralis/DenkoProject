@@ -1,8 +1,13 @@
+import controlP5.*;
+
+ControlP5 cp5;
+Textarea textBox;
+
 // GAME STATES, SCREENS
-int HOME = 0;
-int CALL = 1;
-int MAIL = 2;
-int WEB = 3;
+final int HOME = 0;
+final int CALL = 1;
+final int MAIL = 2;
+final int WEB = 3;
 int GameScreen;
 
 // CLOCK
@@ -20,9 +25,10 @@ PImage denko;
 PImage[] dSprites;
 PImage[] bSprites;
 PFont IgiariFont;
+PFont MSFont;
 
 // BUTTONS
-int numButtons = 2;
+int numButtons = 4;
 PImage[] buttons = new PImage[numButtons];
 float[] bX = new float[numButtons];
 float[] bY = new float[numButtons];
@@ -39,6 +45,8 @@ void setup(){
   
   IgiariFont = createFont("Igiari.otf", 20);
   textFont(IgiariFont);
+  MSFont = createFont("MSpGothic.ttf", 20);
+  textFont(MSFont);
 
 // CURSOR
   denko = loadImage("Denko.png");
@@ -63,16 +71,25 @@ void setup(){
   clockDiameter = radius * 1.8;
   cx = width/2;
   cy = height/4;
+  
+  setupWebText();
 
 }
 
 
 void draw(){
 
-switch(GameScreen){
-  case(0):
-    HOME();
-}
+  switch(GameScreen){
+    case(WEB): 
+      WEB();
+      break;
+    case(HOME):
+      HOME();
+      break;
+    default:
+       HOME();
+       break;
+  }
 
 // Cursor must be drawn last in draw loop
   Cursor();
