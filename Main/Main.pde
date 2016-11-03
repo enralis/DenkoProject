@@ -19,6 +19,7 @@ float clockDiameter;
 
 // BACKGROUND
 PImage bg;
+PImage bg1;
 
 // SPRITES
 PImage denko;
@@ -40,6 +41,7 @@ void setup(){
   
   size(640, 960); //iPhone 4 size
   bg = loadImage("pink_BG.jpg");
+  bg1 = loadImage("grey_BG.jpg");
   frameRate(30);
   imageMode(CENTER);
   
@@ -90,7 +92,6 @@ void draw(){
        HOME();
        break;
   }
-
 // Cursor must be drawn last in draw loop
   Cursor();
   

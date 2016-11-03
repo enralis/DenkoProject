@@ -1,7 +1,7 @@
 void WEB(){
   
-  background(bg);
+  background(bg1);
   displayWebText();
-  textBox.scroll((float)30);
+ 
 
 }
