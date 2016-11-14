@@ -4,7 +4,7 @@ boolean isAnimating = false;
 boolean overButton = false;
 int baseFrameCount = 0;
 
-void Cursor(){
+void DenkoCursor(){
   
   int currentAnimationFrame = frameCount % 100;
   fill(255, 255, 255, 40);
@@ -26,4 +26,11 @@ void Cursor(){
     image(dSprites[0], mouseX, mouseY);
   }
   
+}
+
+void WebCursor(){
+  cursor.resize(15,0);
+  image(cursor, mouseX, mouseY);
+
+
 }

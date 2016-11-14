@@ -3,9 +3,10 @@
 
 void HOME(){
   
-  background(bg);
+  background(pinkBG);
   Clock();
   IntroText();
   Buttons();
+  DenkoCursor();
   
 }
