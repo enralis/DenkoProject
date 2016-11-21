@@ -1,14 +1,17 @@
 // TEXT PROMPTS
-// Add 30 to text box position + size and poster tag, add 35 between poster position to text box 
+// Add 10 to text box position + size and poster tag, add 35 between poster position to text box 
+
+int x = 20;
+int y = 180;
 
 void setupWebText() {
   cp5 = new ControlP5(this);
-  
+  cp5.setAutoDraw(false);
 }
 
 void displayWebText1(){
   textBox = cp5.addTextarea("0")
-                  .setPosition(20,80)
+                  .setPosition(x,y)
                   .setSize(600,25)
                   .setFont(MSFont)
                   .setLineHeight(1)
@@ -16,11 +19,11 @@ void displayWebText1(){
                   .setColorBackground(color(239,172,105))
                   ;
       
-  textBox.setText(   "#OP:"
+  textBox.setText(   "#OP"
                );
   
   textBox = cp5.addTextarea("1")
-                  .setPosition(20,115)
+                  .setPosition(x,y+35)
                   .setSize(600,200)
                   .setFont(MSFont)
                   .setLineHeight(28)
@@ -36,9 +39,10 @@ void displayWebText1(){
                     +" thinking that Denko might be sick, or that something happened to her… (´･ω･`)"
                     +" Please, somebody give me some advice."
                );
+   
                     
  textBox = cp5.addTextarea("2")
-                  .setPosition(20,345)
+                  .setPosition(x,y+235+10)
                   .setSize(600,25)
                   .setFont(MSFont)
                   .setLineHeight(1)
@@ -50,7 +54,7 @@ void displayWebText1(){
                );
     
   textBox = cp5.addTextarea("3")
-                  .setPosition(20,375)
+                  .setPosition(x,y+245+35)
                   .setSize(600,60)
                   .setFont(MSFont)
                   .setLineHeight(28)
@@ -62,8 +66,9 @@ void displayWebText1(){
                     +"\nGIVE IT UP."
                );
                
+               
  textBox = cp5.addTextarea("4")
-                  .setPosition(20,465)
+                  .setPosition(x,y+340+10)
                   .setSize(600,25)
                   .setFont(MSFont)
                   .setLineHeight(1)
@@ -75,7 +80,7 @@ void displayWebText1(){
                );
     
   textBox = cp5.addTextarea("5")
-                  .setPosition(20,500)
+                  .setPosition(20,y+350+35)
                   .setSize(600,30)
                   .setFont(MSFont)
                   .setLineHeight(28)
@@ -87,7 +92,7 @@ void displayWebText1(){
                );
 
 textBox = cp5.addTextarea("6")
-                  .setPosition(20,560)
+                  .setPosition(20,y+415+10)
                   .setSize(600,25)
                   .setFont(MSFont)
                   .setLineHeight(1)
@@ -99,8 +104,8 @@ textBox = cp5.addTextarea("6")
                );
     
   textBox = cp5.addTextarea("7")
-                  .setPosition(20,595)
-                  .setSize(600,170)
+                  .setPosition(20,y+425+35)
+                  .setSize(600,200)
                   .setFont(MSFont)
                   .setLineHeight(28)
                   .setColor(color(117,117,117))
@@ -110,36 +115,23 @@ textBox = cp5.addTextarea("6")
   textBox.setText(   "Well, I called her too in case she was sick or something happened… (´･ω･`) "
                     +" Maybe this last email I sent did something to hurt Denko’s"
                     +" feelings? Give me your opinion here…"
+                    +"\n..."
                     +"\n'Yahoo! Good weather today. You haven’t emailed me or called me, so I’m just"
                     +" sending this since I'm worried. Did I do something bad?"
                     +" PS. The stars were pretty last night.'"
                );
-
- textBox = cp5.addTextarea("8")
-                  .setPosition(20,795)
-                  .setSize(600,25)
-                  .setFont(MSFont)
-                  .setLineHeight(1)
-                  .setColor(color(255))
-                  .setColorBackground(color(134,209,216))
-                  ;
-                  
-  textBox.setText(   "#ANONYMOUS"
-               );
-    
-  textBox = cp5.addTextarea("9")
-                  .setPosition(20,825)
+               
+  textBox = cp5.addTextarea("8")
+                  .setPosition(98,890)
                   .setSize(600,60)
-                  .setFont(MSFont)
-                  .setLineHeight(28)
-                  .setColor(color(117,117,117))
-                  .setColorBackground(color(255,180))
+                  .setFont(IgiariFont)
+                  .setLineHeight(40)
+                  .setColor(color(233,73,73))
+                  .setColorBackground(color(255,0))
                   ;
       
-  textBox.setText(   "Just hypothetically, what would you think if you got an"
-                    +" email like that from an ugly girl you don’t have any interest in?"
+  textBox.setText(   "No more new posts. Please refresh to update."
                );
-
 }
 
 void hideWebText(){

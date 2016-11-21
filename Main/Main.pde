@@ -3,11 +3,13 @@ import controlP5.*;
 ControlP5 cp5;
 Textarea textBox;
 
+
 // GAME STATES, SCREENS
 final int HOME = 0;
-final int CALL = 1;
+final int CONTACTS = 1;
 final int MAIL = 2;
-final int WEB = 3;
+final int PIC = 3;
+final int WEB = 4;
 int GameScreen;
 
 // CLOCK
@@ -18,9 +20,11 @@ float hoursRadius;
 float clockDiameter;
 
 // BACKGROUND
+PImage lightgrayBG;
 PImage pinkBG;
 PImage grayBG;
 PImage webBG;
+PImage homeBG;
 
 // SPRITES
 PImage denko;
@@ -29,9 +33,17 @@ PImage[] dSprites;
 PImage[] bSprites;
 PFont IgiariFont;
 PFont MSFont;
+PImage chDenko;
 
 // MISC
 PImage ad1;
+PImage wifi;
+PImage reload;
+PImage home;
+PImage contact1;
+PImage contact2;
+PImage contact3;
+int numClicks;
 
 // BUTTONS
 int numButtons = 4;
@@ -40,14 +52,24 @@ float[] bX = new float[numButtons];
 float[] bY = new float[numButtons];
 float[] bW = new float[numButtons];
 float[] bH = new float[numButtons];
-boolean pressed = false;
+boolean ppressed = false;
+boolean mpressed = false;
+boolean ipressed = false;
+boolean wpressed = false;
+boolean hpressed = false;
+boolean h2pressed = false;
+boolean h3pressed = false;
+boolean h4pressed = false;
+boolean rpressed = false;
 
 void setup(){
-  
+
   size(640, 960); //iPhone 4 size
   pinkBG = loadImage("pink_BG.jpg");
+  lightgrayBG = loadImage("lgray_BG.jpg");
   grayBG = loadImage("gray_BG.jpg");
   webBG = loadImage("web_BG.jpg");
+  homeBG = loadImage("home_BG.jpg");
   frameRate(30);
   imageMode(CENTER);
   
@@ -80,14 +102,23 @@ void setup(){
   }
   
   denko = loadImage("Denko.png");
-  noCursor();
   
   cursor = loadImage("WebCursor.png");
   imageMode(CENTER);
   
 // MISC
-ad1 = loadImage("ad_Banner1.jpg");
-
+  ad1 = loadImage("ad_Banner1.jpg");
+  wifi = loadImage("wifi.png");
+  reload = loadImage("reload.png");
+  home = loadImage("home.png");
+  contact1 = loadImage("contact_1.jpg");
+  contact2 = loadImage("contact_2.jpg");
+  contact3 = loadImage("contact_3.jpg");
+  
+  chDenko = loadImage("chathead_denko.png");
+  
+  noCursor();
+  
 }
 
 
@@ -97,6 +128,15 @@ void draw(){
     case(WEB): 
       WEB();
       break;
+    case(MAIL):
+      MAIL();
+      break;
+    case(CONTACTS): 
+      CONTACTS();
+      break;
+    case(PIC): 
+      PIC();
+      break;
     case(HOME):
       HOME();
       break;
@@ -104,5 +144,5 @@ void draw(){
        HOME();
        break;
   }
-  
+ 
 }

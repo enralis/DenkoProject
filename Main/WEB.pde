@@ -1,8 +1,10 @@
 void WEB(){
   
-  background(webBG);
-  //image(ad1, width/2, 50);
-  displayWebText1();
-  WebCursor();
+if (numClicks == 1){
+  Web1();
+} 
+if (numClicks == 2){
+  Web2();
+} 
 
 }

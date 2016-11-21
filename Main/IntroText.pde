@@ -1,6 +1,7 @@
 // TEXT PROMPTS
 
 void IntroText(){
+  textSize(16);
   
   strokeWeight(1.3);
   if (millis() > 2000 && millis() <= 4000){
