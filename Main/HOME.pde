@@ -6,11 +6,13 @@ void HOME(){
   background(homeBG);
   textSize(15);
   textAlign(CENTER);
+  fill(255, 60);
   text("DOPOMO", 565,22);
   Clock();
   IntroText();
   Buttons();
   image(wifi, 620,15);
-  DenkoCursor();
+  
+  mouseHover();
   
 }

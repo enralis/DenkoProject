@@ -1,5 +1,5 @@
 void Buttons(){
-
+imageMode(CENTER);
     buttons[0] = loadImage("phone.png");
     bX[0] = 100;
     bY[0] = 900;

@@ -34,3 +34,11 @@ void WebCursor(){
 
 
 }
+
+void XCursor(){
+  xcursor.resize(400,0);
+  imageMode(CORNER);
+  image(xcursor, mouseX, mouseY);
+
+
+}

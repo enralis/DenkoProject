@@ -29,6 +29,7 @@ PImage homeBG;
 // SPRITES
 PImage denko;
 PImage cursor;
+PImage xcursor;
 PImage[] dSprites;
 PImage[] bSprites;
 PFont IgiariFont;
@@ -105,6 +106,8 @@ void setup(){
   
   cursor = loadImage("WebCursor.png");
   imageMode(CENTER);
+  
+  xcursor = loadImage ("XCursor.png");
   
 // MISC
   ad1 = loadImage("ad_Banner1.jpg");
